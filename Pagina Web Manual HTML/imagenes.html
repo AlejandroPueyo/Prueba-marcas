@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Imagenes</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Adrian">
+		<link type="text/css" rel="stylesheet" href="estilo.css">
+	</head>
+	<body>
+		
+		<nav>
+		<a href="index.html">Inicio</a>
+  		<a href="estructurabasica.html">Estructura Basica</a>
+  		<a href="elementos.html">Elementos</a>
+  		<a href="atributos.html">Atributos</a>
+		<a href="tablas.html">Tablas</a>
+		<a href="listas.html">Listas</a>
+		</nav>
+		<h1>Imagenes</h1>
+		<pre>
+	Para insertar imagenes en un documento HTML utilizamos el elemento <strong>&lt;img&gt;</strong>.
+	Este elemento solo contiene atributos, no contiene contenido en el.
+	Ademas este elemento no se cierra.
+		
+	<img src=imagen.PNG>
+
+	En los atributos tambien podemos especificar las dimensiones que queramos que tenga.
+	Se puede indicar el pixeles, cm, mm, en porcentaje, etc...
+
+	<img src=dimensionimagen.PNG>
+
+	A una imagen le podemos marcar diferentes zonas de ella que cada zona tenga un enlace.
+	Para hacer esto usamos el atributo usemap dentro del elemento <strong>&lt;img&gt;</strong>.
+	Despues utilizamos el elemento <strong>&lt;map&gt;</strong> con el atributo name y que tenga como valor el nombre que le hayamos dado.
+	Dentro de este elemento, abrimos otro elemento <strong>&lt;area&gt;</strong>, que no hace falta cerrarla, y en este elemento ponemos los 
+	atributos shape para indicar la forma de la zona (circle, rect, etc..), las cordenadas de la zona con coords y el enlace con href.  
+	
+	<img src=usemap.PNG>
+	
+		</pre>
+		
+
+	</body>
+</html>
