@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<title> Manual HTML</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Alejandro Pueyo">
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+	</head>
+	<body>
+		<nav>
+		<a href=#estructura>Estructura básica</a>
+		<a href=#elementos>Elementos etiquetas</a>
+		<a href=#titulos>Títulos</a>
+		<a href=#agrupacion>Agrupación</a>
+		<a href=#listas>Listas</a>
+		<a href=#horizontal>Linea horizontal</a>
+		<a href=#tabla>Tablas</a>
+		<a href=#semantico>Elementos semanticos Texto</a>
+		<a href=#salto>Salto de línea</a>
+		<a href=#hiper>Hiperenlaces</a>
+		<a href=#encajado>Elementos encajados</a>
+		<a href=#mapa>Mapas de imagen</a>
+		</nav>
+		<h1>Manual De HTML</h1>
+		<hr>
+		<h2> ¿ Qué es HTML ?</h2>
+		<p>
+			HTML, sigla en inglés de HyperText Markup Language (lenguaje de marcas de hipertexto), hace referencia al lenguaje de marcado para la elaboración de páginas web. Es un estándar que sirve de referencia del software que conecta con la elaboración de páginas web en sus diferentes versiones, define una estructura básica y un código (denominado código HTML) para la definición de contenido de una página web, como texto, imágenes, videos, juegos, entre otros.
+		</p>
+		<hr>
+		<h2 id=estructura> Estructura Básica de un documento HTML</h2>
+		<p>
+			Un documento HTML esta formado por etiquetas, dentro de estas escribiremos una serie de "parametros" para que el navegador las represente.
+			Un ejemplo de una etiqueta sería este : <b>&lt;Etiqueta&gt;</b> y para cerrar la etiqueta asi :<b>&lt;/Etiqueta&gt;</b>.
+		</p>
+		<p>
+			Todo documento HTML debe empezar con la etiqueta <b>&lt;!doctype html&gt;</b>, este indica que el documento esta escrito en HTML5.
+		</p>
+		<p>
+			Despues continuariamos con la etiqueta <b>&lt;html&gt;</b> que es lo que contendrá toda la informacion de la página web. A esta etiqueta se le puede añadir un atributo llamado lang donde indicaremos en que idioma esta hecha la página.
+			<br>
+			Un Ejemplo: <b>&lt;html lang="es"&gt;</b> aqui le estamos indicando que esta en español.
+		</p>
+		<p>
+			Luego estaria, la etiqueta <b>&lt;head&gt;</b> :
+			<br>
+			La etiqueta <b>&lt;head&gt;</b> es la cabezera del documento HTML, dentro de ella pondremos <b>&lt;title&gt;</b> aquí ira el nombre de la página, el que sale en la pestaña.
+			<br>
+			También tendra <b>&lt;meta charset="valor"&gt;</b> para indicar en que codificación esta la página, por ejemplo : <b>&lt;meta charset="utf-8"&gt;</b> para decirle que usa la codificación utf-8.
+			<br>
+			Despues añadiremos <b>&lt;meta name="author" content="Alejandro"&gt;</b> para poner el nombre del autor de la web.
+		</p>
+		<p>
+			La siguiente etiqueta despues de <b>&lt;head&gt;</b> sería <b>&lt;body&gt;</b>, aqui estara el cuerpo de toda la página web.
+		</p>
+		<p>
+			Todo esto dicho anteriormente seria la estructura basica de un documento HTML, aqui pongo un ejemplo de como quedaría:
+		</p>
+		<pre>
+			&lt;!doctype html&gt;
+			&lt;html lang="es"&gt;
+				&lt;head&gt;
+					&lt;title&gt;Mi primera página&lt;/title&gt;
+					&lt;meta charset="utf-8"&gt;
+					&lt;meta name="author" content="Alejandro"&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+					cuerpo del documento
+				&lt;/body&gt;
+			&lt;/html&gt;
+		</pre>
+		<hr>
+		<h2 id=elementos>Elementos de la etiqueta &lt;body&gt;</h2>
+		<p>
+			Dentro del cuerpo del documento tendremos las siguientes etiquetas:
+			<dl>
+				<dt>
+					<b>&lt;article&gt;&lt;/article&gt;</b>
+				</dt>
+				<dd>
+					será usada para representar un contenido específico de nuestra web. Puede representar un artículo, ya sea un artículo de opinión, un entrada en un blog, un comentario en un foro, una noticia, una descarga, o simplemente un contenido estático de una web como el típico quienes somos o a qué nos dedicamos.
+				</dd>
+				<br>
+				<dt>
+					<b>&lt;section&gt;&lt;/section&gt;</b>
+				</dt>
+				<dd>
+					se usa para representar un bloque de nuestra página que tiene valor semántico, es decir, que aporta un significado a la página. Esta etiqueta se coloca dentro de la etiqueta &lt;article&gt;.
+				</dd>
+				<br>
+				<dt>
+				<b>&lt;header&gt;&lt;/header&gt;</b>
+				</dt>
+				<dd>
+					Esto sera la cabezera de la página web, lo que visualizaremos en la parte de arriba de la página.
+				</dd>
+				<br>
+				<dt>
+					<b>&lt;nav&gt;&lt;/nav&gt;</b>
+				</dt>
+				<dd>
+					Esta etiqueta es nos creara una barra de navegación como la que hay arriba del todo de esta web, con la que podremos movernos por los diferentes sitios de la página, o nos llevara a otros sitios web.
+				</dd>
+			
+				<br>
+				<dt>
+					<b>&lt;aside&gt;&lt;/aside&gt;</b>
+				</dt>
+				<dd>
+					Se usa para elementos secundarios, como podrian ser los bloques publicitarios, enlaces externos, citas, un calendario de eventos, etc. Por ejemplo si estamos hablando de un tema, con un aside podemos poner alguna informacion relacionada con ese tema, que nos ayude a entenderlo mejor.
+				</dd>
+				<br>
+				<dt>
+					<b>&lt;footer&gt;&lt;/footer&gt;</b>
+				</dt>
+				<dd>
+					Es el pie de página de la web.
+				</dd>
+				<br>
+				<dt>
+					<b>&lt;address&gt;&lt;/address&gt;</b>
+				</dt>
+				<dd>
+					Va dentro de la etiqueta <b>&lt;footer&gt;</b>, sirve por ejemplo para colocar una dirección de email para contacto.
+				</dl>
+		</p>
+		<h3 id=titulos>
+			Titulos
+		</h3>
+		<p>
+			Los titulos son etiquetas que van de <b>&lt;h1&gt;</b> a <b>&lt;h6&gt;</b>, el 1 sera un titulo con letra mas grande y la 6 un titulo con la letra mas pequeña
+			<br>
+			Ejemplo:
+			<br>
+			<br>
+			<b>&lt;h1&gt;</b> titulo h1 <b>&lt;/h1&gt;</b>
+			<h1>titulo h1</h1>
+
+			<b>&lt;h2&gt;</b> titulo h2 <b>&lt;/h2&gt;</b>
+			<h2>titulo h2</h2>
+
+			<b>&lt;h3&gt;</b> titulo h3 <b>&lt;/h3&gt;</b>
+			<h3>titulo h3</h3>
+
+			<b>&lt;h4&gt;</b> titulo h4 <b>&lt;/h4&gt;</b>
+			<h5>titulo h4</h4>
+
+			<b>&lt;h5&gt;</b> titulo h5 <b>&lt;/h5&gt;</b>
+			<h5>titulo h5</h5>
+
+			<b>&lt;h6&gt;</b> titulo h6 <b>&lt;/h6&gt;</b>
+			<h6>titulo h6</h6>
+		</p>
+		<br>
+		<h3 id=agrupacion>Agrupación</h3>
+		<p>
+			Con la etiqueta <b>&lt;p&gt;</b> escribiremos parrafos, de hecho este documento esta hecho en su mayoria, por parrafos formados por dicha etiqueta.
+			<br>
+			Un ejemplo:
+			<br>
+			&lt;p&gt; Esto es un parrafo &lt;/p&gt;
+			<br>
+			&lt;p&gt; Esto es otro  parrafo &lt;/p&gt;
+		</p>
+		<p>Esto es un parrafo</p>
+		<p>Esto es otro parrafo</p>
+		<p>
+		Con la etiqueta <b>&lt;pre&gt;</b> escribiremos un texto preformateado con un tipo de letra monoespaciada y conservara todos los espacios, saltos de linea, tabulaciones que pongamos, al contrario que con la etiqueta <b>&lt;p&gt;</b>
+		<br>
+		Ejemplo:
+		<br>
+		<p/>
+		<pre>
+		<b>&lt;pre&gt;</b>
+		
+			hola este texto esta        preformateado y ahora le añado una tabulación		y ahora salto de linea
+							hola mundo
+
+			texto preformateado			hola :D
+		<br>
+		<b>&lt;/pre&gt;</b>
+
+
+
+					hola este texto esta        preformateado y ahora le añado una tabulación		y ahora salto de linea
+							hola mundo
+
+			texto preformateado			hola :D
+		</pre>
+		<br>
+		<h3 id=listas>Listas</h3>
+		<p>
+			Los elementos de una lista, se hacen con la etiqueta <b>&lt;li&gt;</b>, para formar una lista desordenada, utilizaremos <b>&lt;ul&gt;</b> y para una ordenada usaremos <b>&lt;ol&gt;</b>
+			<br>
+			Ejemplo:
+		</p>
+		<pre>
+			&lt;ol&gt;
+				&lt;li&gt; una &lt;/li&gt;
+				&lt;li&gt; lista &lt;/li&gt;
+				&lt;li&gt; ordenada &lt;/li&gt;
+			&lt;/ol&gt;
+			&lt;ul&gt;
+				&lt;li&gt; una &lt;/li&gt;
+				&lt;li&gt; lista &lt;/li&gt;
+				&lt;li&gt; desordenada &lt;/li&gt;
+			&lt;/ul&gt;
+		</pre>
+		<ol>
+			<li>una </li>
+			<li> lista </li>
+			<li> ordenada </li>
+		</ol>
+		<ul>
+			<li> una </li>
+			<li> lista </li>
+			<li> desordenada </li>
+		</ul>
+		<p>
+			Luego tenemos las listas de definición, que es parecido a lo que usariamos por ejemplo en un diccionario. Para crear la lista se usa la etiqueta &lt;dl&gt; y dentro irian &lt;dt&gt; y &lt;dd&gt;, pongo un ejemplo para que se entienda su manejo:
+		</p>
+		<pre>
+			&lt;dl&gt;
+				&lt;dt&gt;
+					Mariposa
+				&lt;/dt&gt;
+				&lt;dd&gt;
+					Insecto de boca chupadora, con dos pares de alas cubiertas de escamas y generalmente 
+					de colores brillantes, que constituye la fase adulta de los lepidópteros.
+				&lt;/dd&gt;
+				&lt;dt&gt;
+					León
+				&lt;/dt&gt;
+				&lt;dd&gt;
+					Gran mamífero carnívoro félido africano, de pelaje amarillo rojizo, con la cabeza 
+					grande, los dientes y las uñas muy fuertes, la cola larga y terminada en un fleco 
+					de cerdas, y cuyo macho se distingue por una larga melena.
+				&lt;/dd&gt;
+			&lt;/dl&gt;
+		</pre>
+		<dl>
+				<dt>
+					Mariposa
+				</dt>
+				<dd>
+					Insecto de boca chupadora, con dos pares de alas cubiertas de escamas y generalmente 
+					de colores brillantes, que constituye la fase adulta de los lepidópteros.
+				</dd>
+				<dt>
+					León
+				</dt>
+				<dd>
+					Gran mamífero carnívoro félido africano, de pelaje amarillo rojizo, con la cabeza 
+					grande, los dientes y las uñas muy fuertes, la cola larga y terminada en un fleco 
+					de cerdas, y cuyo macho se distingue por una larga melena.
+				</dd>
+		</dl>
+		<p>
+			En la etiqueta de las listas ordenadas <b>&lt;ol&gt;</b> podremos ponerle diferentes atributos, por ejemplo para que el orden de la lista salga inverso, o que salga ordenado por letras, o por numeros romanos, para ello hay que poner <b>&lt;ol reversed&gt;</b> para que salga en orden invertido, y <b>&lt;ol type="tipo"&gt;</b> para ponerlo en numeros romanos, letras, dependiendo de que tipo le pongamos.
+		</p>
+		<ul>
+			<li>
+				&lt;ol type= -1&gt;: nos creara una lista ordenada con numeros, es la que viene por defecto.
+			</li>
+			<li>
+				&lt;ol type= -a&gt;: nos creara una lista ordeada con letras minusculas.
+			</li>
+			<li>
+				&lt;ol type= -A&gt;: nos creara una lista ordenada con letras mayusculas.
+			</li>
+			<li>
+				&lt;ol type= -i&gt;: nos creara una lista ordenada con numeros romanos en minuscula.
+			</li>
+			<li>
+				&lt;ol type= -I&gt;: nos creara una lista ordenada con numeros romanos en mayuscula.
+			</li>
+		</ul>
+		<h3 id=horizontal>Línea horizontal</h3>
+		<p>
+			Con la etiqueta <b>&lt;hr&gt;</b> lo que haremos sera poner una linea horizontal para separar diferentes temas de una página por ejemplo. Un ejemplo de linea horizontal:
+		</p>
+		<hr>
+		<h3 id=tabla>Tablas</h3>
+		<p>
+			Para crear tablas utilizaremos las siguientes etiquetas:
+			<br>
+			<br>
+			<b>&lt;table&gt;</b>, <b>&lt;/table&gt;</b> dentro de esta etiqueta es donde escribiremos el cuerpo de nuestra tabla
+			<br>
+			con la etiqueta <b>&lt;tr&gt;</b> crearemos las columnas
+			<br>
+			y con la etiqueta <b>&lt;td&gt;</b> las filas
+			<br>
+			si a la etiqueta table le añadimos el atributo border añadiremos un borde a la tabla, ya que por defecto sale sin borda.
+			<br>
+			<br>
+			Un ejemplo de una tabla:
+			<br>
+		</p>
+		<pre>
+			&lt;table border&gt;
+				&lt;tr&gt;
+					&lt;td&gt;Juego
+					&lt;td&gt;Tipo
+					&lt;td&gt;Plataforma
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td&gt;Halo
+					&lt;td&gt;Accion
+					&lt;td&gt;Xbox
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td&gt;Final Fantas 8
+					&lt;td&gt;Rpg
+					&lt;td&gt;Play Station
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		</pre>
+		<table border>
+				<tr>
+					<td>Juego
+					<td>Tipo
+					<td>Plataforma
+				</tr>
+				<tr>
+					<td>Halo
+					<td>Accion
+					<td>Xbox
+				</tr>
+				<tr>
+					<td>Final Fantas 8
+					<td>Rpg
+					<td>Play Station
+				</tr>
+			</table>
+		<p>
+		en la etiqueta td podemos añadirle uno de los dos atributos que hay, uno es colspan y el otro rowspan, sirve para desplazar la casilla y hacer que ocupe mas de una. Con la primera añadimos una casilla mas a la columna y con la segunda a la fila.
+		<br>
+		<br>
+		Un ejemplo:
+		</p>
+		<pre>
+			&lt;table border&gt;
+				&lt;tr&gt;
+					&lt;td colspan="2"&gt;Juego
+					&lt;td rowspan="2"&gt;Plataforma
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td&gt;Halo
+					&lt;td&gt;Accion
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td&gt;Final Fantas 8
+					&lt;td&gt;Rpg
+					&lt;td&gt;Play Station
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		</pre>
+		<table border>
+				<tr>
+					<td colspan="2">Juego
+					<td rowspan="2">Plataforma
+				</tr>
+				<tr>
+					<td>Halo
+					<td>Accion
+				</tr>
+				<tr>
+					<td>Final Fantas 8
+					<td>Rpg
+					<td>Play Station
+				</tr>
+			</table>
+		<hr>
+		<h2 id=semantico>Elementos Semánticos de Texto</h2>
+		<p>
+			A los textos que escribamos podremos resaltarlos de diferentes formas con las siguientes etiquetas:
+		</p>
+		<ul>
+			<li>
+				&lt;i&gt; : pondremos lo que este dentro en cursiva.
+			</li>
+			<li>
+				&lt;b&gt; : pondremos lo que este dentro en negrita.
+			</li>
+			<li>
+				&lt;u&gt; : pondremos lo que este dentro subrayado.
+			</li>
+			<li>
+				&lt;EM&gt; : resaltaremos una parte del texto.
+			</li>
+			<li>
+				&lt;STRONG&gt; : Pondremos como en negrita el texto.
+			</li>
+			<li>
+				&lt;SMALL&gt; : Pondremos la letra pequeña.
+			</li>
+			<li>
+				&lt;S&gt; : Pondremos el texto tachado.
+			</li>
+		</ul>
+		<p>
+			Ahora pondremos algunos ejemplos:
+			<br>
+			<br>
+			&lt;i&gt;Esta frase esta en cursiva&lt;/i&gt;. &lt;b&gt;Esta en negrita&lt;/b&gt;. &lt;u&gt;Esta subrayada&lt;/u&gt;. &lt;EM&gt; Esta resaltada &lt;/EM&gt;. &lt;STRONG&gt;Esta en STRONG&lt;/STRONG&gt;. &lt;SMALL&gt;Esta en letra pequeña&lt;/SMALL&gt;. &lt;S&gt;y esta tachada&lt;/S&gt;
+			<br>
+			<br>
+			<i>Esta frase esta en cursiva</i>. <b>Esta en negrita</b>. <u>Esta subrayada</u>. <EM> Esta resaltada </EM>. <STRONG>Esta en STRONG</STRONG>. <SMALL>Esta en letra pequeña</SMALL>. <S>y esta tachada</S>
+		</p>
+		<hr>
+		<h2 id=salto>Salto de línea</h2>
+		<p>
+			Con la etiqueta <b>&lt;br&gt;</b> podemos hacer saltos de linea en los parrafos, no necesita cerrarse la etiqueta. Un ejemplo:
+			<br>
+			<br>
+			Aqui delante &lt;br&gt; va un salto de linea.
+			<br>
+			<br>
+			Aqui delante <br> va un salto de linea.
+		</p>
+		<hr>
+		<h2 id=hiper>Hiperenlaces</h2>
+		<p>
+			Con la etiqueta <b>&lt;a href="url de la página web"&gt;</b> podremos poner enlaces a otras páginas webs,o ficheros html que esten en nuestro directorio o subdirectorios si estamos trabajando de forma local, un ejemplo:
+			<br>
+			<br>
+			&lt;a href="https://www.google.es/"&gt;Aquí para ir a google&lt;/a&gt;
+			<br>
+			<br>
+			<a href="https://www.google.es/">Aquí para ir a google</a>
+			<br>
+			<br>
+			Tambien podemos usarlo para movernos por la propia pagina web, colocamos la siguiente etiqueta 
+			<b>&lt;a name="nombre"&gt;</b> con eso haremos referencia a otra parte de la página, luego en cualquier etiqueta de las creadas de toda la página le añadimos por ejemplo <b>&lt;p id="nombre"&gt;</b>, entonces al pinchar al texto que le hayamos asignado la etiqueta <b>&lt;a name="nombre"&gt;</b> nos llevará a donde hallamos colocado la id, en este caso donde pusimos <b>&lt;p id="nombre"&gt;</b>
+			<br>
+			Si ponemos lo siguiente <b>&lt;a href=#top&gt;</b> ir al principio de la página <b>&lt;/a&gt;</b> nos llevara al principio de la página
+		</p>
+		<hr>
+		<h2 id=encajado> Contenido encajado</h2>
+		<p>
+			Con la etiqueta <b>&lt;img src="ruta imagen" alt="mi foto"&gt;</b> podemos añadir imagenes a nuestra web, mediante una url de internet, o desde una imagen que tengamos en alguna carpeta en local. Un ejemplo
+			<br>
+			<br>
+			<b>&lt;img src="https://halo.bungie.net/images/dark/projects/games/halo/games_halo_header.jpg" alt="Foto de halo" &gt;</b>
+			<br>
+			<br>
+			<img src="https://halo.bungie.net/images/dark/projects/games/halo/games_halo_header.jpg" alt="Foto de halo">
+		</p>
+		<hr>
+		<h2 id=mapa>Mapas de imagen </h2>
+		<p>
+			Un mapa de imagen es, al tener una imagen, y pinchar en algun lado en conreto, que te lleve por ejemplo, a una pagina web. Por ejemplo, tienes una imagen donde tienes caratulas de videojuegos, cuando pinches en una de las cartulas, te llevara a su respectiva página oficial.
+			<br>
+			<br>
+			Un ejemplo de como se hace:
+			<br>
+			<br>
+			&lt;img src="ruta de la imagen" usemap="id"&gt;
+			<br>
+			&lt;map name="nombre"&gt;
+			<br>
+			&lt;area shape=rect coords= 45,45,45,45 href="url de la pagina" alt="nombre"&gt;
+			<br>
+			&lt;/map&gt;
+			<br>
+			<br>
+			Dependiendo de que forma le quieras dar al area, pondremos diferentes atributos, por ejemplo si el area que queremos hacer es un rectangulo, pondremos rect, si es un circulo, circle, si es un poligono, poly.
+			<br>
+			En coords añadiremos las diferentes coordenadas para situar el area donde nosotros queramos.
+		</p>
+	</body>
+</html>
